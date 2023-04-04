@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+.main {
+  display: grid;
+
+  width: 1280px;
+  margin: 0 auto;
+  background-color: REd;
+  grid-template-columns: 30% 70%;
+}
+.whitefirst {
+  background-color: #e8e8e8;
+  height: 400px;
+}
+.blackfirst {
+  background-color: #170f0f;
+  height: 400px;
+}
+.whitesecond {
+  background-color: #e8e8e8;
+  height: 1200px;
+}
+.blacksecond {
+  background-color: #170f0f;
+  height: 1200px;
+}
+.grayline {
+  position: relative;
+  background-color: #d5d1d1;
+  height: 170px;
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+.photo {
+  position: absolute;
+  top: -40px;
+  left: 50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px;
+  border-style: solid;
+  border-color: rgb(178, 180, 180);
+}
+.name {
+  font-size: 50px;
+  padding-top: 35px;
+  padding-left: 80px;
+  margin: 0px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: Black;
+}
+.title {
+  font-size: 25px;
+  padding-left: 80px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 0px;
+  color: Gray;
+}
+.blacksecond {
+  font-family: "Source Sans Pro", sans-serif;
+  color: White;
+  padding-left: 80px;
+  padding-right: 50px;
+}
+.whitesecond {
+  font-family: "Source Sans Pro", sans-serif;
+  color: Gray;
+  padding-left: 80px;
+  padding-right: 50px;
+}
+.main-info {
+  margin: 0px;
+
+  font-size: 30px;
+}
+.text1 {
+  margin-right: 50px;
+}
+.text2 {
+  padding-top: 30px;
+}
+.skill-list {
+  margin: 0px;
+  padding: 0px 0px 0px 15px;
+}
+.blackspan {
+  color: black;
+}
