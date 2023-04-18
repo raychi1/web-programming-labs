@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // змінна з числовим типом даних
+      let num = 42;
+      // змінна з рядковим типом даних
+      let str = "Hello, world!";
+      // змінна з булевим типом даних
+      let bool = true;
+      // змінна зі значенням null
+      let nullValue = null;
+      // змінна зі значенням undefined
+      let undefinedValue = undefined;
+      // змінна з об'єктом
+      let obj = { name: "John", age: 25, city: "New York" };
+      // змінна зі списком
+      let arr = [1, 2, 3, 4, 5];
+      // змінна зі символьним типом даних
+      let sym = Symbol("foo");
+      // змінна зі значенням NaN (Not a Number)
+      let nanValue = NaN;
+      // змінна з функцією
+      let func = function (a, b) {
+        return a + b;
+      };
+
+      console.log(typeof num); // number
+      console.log(typeof str); // string
+      console.log(typeof bool); // boolean
+      console.log(typeof nullValue); // object (a known quirk in JavaScript)
+      console.log(typeof undefinedValue); // undefined
+      console.log(typeof obj); // object
+      console.log(typeof arr); // object (arrays are objects in JavaScript)
+      console.log(typeof sym); // symbol
+      console.log(typeof nanValue); // number (NaN is a numeric data type)
+      console.log(typeof func); // function
+
+      // This is a single-line comment
+
+      /*
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec ut lacus vitae odio dignissim auctor.
+      Aliquam luctus urna ac ante varius lobortis.
+      Duis malesuada, metus ut commodo finibus, lectus risus commodo enim, eget blandit justo tellus eu massa.
+      */
+
+      let a = 10;
+      let b = 5;
+      let sum = a + b;
+      console.log("Сума:", sum);
+      let difference = a - b;
+      console.log("Різниця:", difference);
+      let product = a * b;
+      console.log("Добуток:", product);
+      let quotient = a / b;
+      console.log("Частка:", quotient);
+
+      let a2 = 5;
+      let b2 = 10;
+      let c2 = 15;
+
+      // логічний оператор AND (&&)
+      if (a2 > 0 && b2 > 0) {
+        console.log("a2 і b2 є додатніми числами");
+      }
+
+      // логічний оператор OR (||)
+      if (a2 > 0 || b2 > 0) {
+        console.log("або a2, або b2 є додатнім числом (або обидва)");
+      }
+
+      // побітовий оператор AND (&)
+      let result1 = b2 & c;
+      console.log(result1); // виведе 10 (1010 & 1111 = 1010)
+      // побітовий оператор OR (|)
+      let result2 = b2 | c;
+      console.log(result2); // виведе 15 (1010 | 1111 = 1111)
+      // побітовий оператор XOR (^)
+      let result3 = b2 ^ c;
+      console.log(result3); // виведе 5 (1010 ^ 1111 = 0101)
+      // побітовий оператор NOT (~)
+      let result4 = ~a2;
+      console.log(result4); // виведе -6 (~0101 = 1010 = -6)
+      // зсув вліво (<<)
+      let result5 = b2 << 1;
+      console.log(result5); // виведе 20 (1010 << 1 = 10100)
+      // зсув вправо зі знаком (>>)
+      let result6 = c >> 1;
+      console.log(result6); // виведе 7 (1111 >> 1 = 111)
+      // зсув вправо без знаку (>>>)
+      let result7 = c >>> 1;
+      console.log(result7); // виведе 7 (1111 >>> 1 = 111)
+    </script>
+  </body>
+</html>
