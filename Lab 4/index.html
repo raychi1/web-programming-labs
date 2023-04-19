@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Об'єкти з різними типами даних
+      const obj1 = { name: "John", age: 25 }; // об'єкт зі строковим та числовим типом даних
+      const obj2 = { isAvailable: true, price: 99.99 }; // об'єкт з булевим та числовим типом даних
+      const obj3 = { colors: ["red", "green", "blue"], isColorful: true }; // об'єкт зі списком та булевим типом даних
+      const obj4 = {
+        student: { name: "Mary", age: 20, major: "Computer Science" },
+      }; // об'єкт зі вкладеним об'єктом
+      const obj5 = { symbol: Symbol("foo") }; // об'єкт з символьним типом даних
+
+      obj1.age = 26; // зміна значення властивості age
+      obj1.gender = "Male"; // додавання нової властивості gender
+
+      obj2.isAvailable = false; // зміна значення властивості isAvailable
+      obj2.price += 10; // збільшення значення властивості price на 10
+
+      obj3.colors.push("yellow"); // додавання нового елементу до списку colors
+      obj3.isColorful = false; // зміна значення властивості isColorful
+
+      obj4.student.name = "Alice"; // зміна значення властивості name вкладеного об'єкта
+      obj4.student.grade = "A"; // додавання нової властивості grade до вкладеного об'єкта
+
+      obj5.symbol = Symbol("bar"); // зміна значення властивості symbol
+
+      // зміна значення у об'єктах за допомогою if...else
+      if (obj1.age >= 18) {
+        obj1.canVote = true;
+      } else {
+        obj1.canVote = false;
+      }
+
+      if (obj2.price < 50) {
+        obj2.isAffordable = true;
+      } else {
+        obj2.isAffordable = false;
+      }
+
+      if (obj3.colors.includes("yellow")) {
+        obj3.hasYellow = true;
+      } else {
+        obj3.hasYellow = false;
+      }
+
+      if (obj4.student.major === "Computer Science") {
+        obj4.student.isSTEM = true;
+      } else {
+        obj4.student.isSTEM = false;
+      }
+
+      if (obj5.symbol.description === "foo") {
+        obj5.isFoo = true;
+      } else {
+        obj5.isFoo = false;
+      }
+
+      let dayOfWeek = 5; // 1 - понеділок, 2 - вівторок, і т.д.
+
+      switch (dayOfWeek) {
+        case 1:
+          console.log("Понеділок");
+          break;
+        case 2:
+          console.log("Вівторок");
+          break;
+        case 3:
+          console.log("Середа");
+          break;
+        case 4:
+          console.log("Четвер");
+          break;
+        case 5:
+          console.log("П'ятниця");
+          break;
+        case 6:
+          console.log("Субота");
+          break;
+        case 7:
+          console.log("Неділя");
+          break;
+        default:
+          console.log("Такого дня не існує!");
+          break;
+      }
+      //assign
+      const object1 = { a: 1, b: 2 };
+      const object2 = { c: 3, d: 4 };
+      const object3 = Object.assign({}, object1, object2);
+      console.log(object3); // { a: 1, b: 2, c: 3, d: 4 }
+      //freeze
+      const object = { a: 1, b: 2 };
+      Object.freeze(object);
+      object.a = 3;
+      console.log(object); // { a: 1, b: 2 }
+      //keys
+      const object = { a: 1, b: 2, c: 3 };
+      const keys = Object.keys(object);
+      console.log(keys); // ['a', 'b', 'c']
+      //entries
+      const object = { a: 1, b: 2, c: 3 };
+      const entries = Object.entries(object);
+      console.log(entries); // [['a', 1], ['b', 2], ['c', 3]]
+    </script>
+  </body>
+</html>
