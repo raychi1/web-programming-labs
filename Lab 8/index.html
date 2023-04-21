@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numArray = [1, 2, 3, 4, 5];
+      const stringArray = ["apple", "banana", "cherry", "date"];
+      const booleanArray = [true, false, true, true];
+      const objectArray = [
+        { name: "John", age: 30 },
+        { name: "Jane", age: 25 },
+      ];
+      const mixedArray = [1, "apple", true, { name: "John", age: 30 }];
+
+      //foreach
+      numArray.forEach((element) => {
+        console.log(element);
+      });
+
+      //map
+      const capitalizedStringArray = stringArray.map((color) =>
+        stringArray.toUpperCase()
+      );
+      console.log(capitalizedStringArray);
+
+      //filter
+      const stringArray2 = ["apple", "banana", "orange", "grapefruit", "kiwi"];
+      const filteredStrings = strings.filter((str) => str.length > 5);
+      console.log(filteredStrings); // ['banana', 'orange', 'grapefruit']
+
+      //reduce
+      const arr = [1, 2, 3, 4, 5];
+      const sum = arr.reduce((acc, curr) => acc + curr);
+      console.log(sum); // виведе 15
+
+      //sort includes join
+      const stringsArray = [
+        "one-test",
+        "cat",
+        "parrot",
+        "banana",
+        "test-dog",
+        "dog",
+      ];
+      // відфільтруємо рядки, які містять слово 'test'
+      const filteredArray = stringsArray.filter((str) => !str.includes("test"));
+      // відсортуємо за алфавітом
+      const sortedArray = filteredArray.sort();
+      // об'єднаємо рядки у один рядок з комами
+      const result = sortedArray.join(", ");
+      console.log(result); // 'banana, cat, dog, one-test, parrot'
+
+      //getSentence
+      function getSentence(words) {
+        return (
+          words
+            .reduce((sentence, word) => {
+              return sentence + " " + word;
+            }, "")
+            .trim() + "."
+        );
+      }
+      // Приклад використання
+      const words = [
+        "The",
+        "quick",
+        "brown",
+        "fox",
+        "jumps",
+        "over",
+        "the",
+        "lazy",
+        "dog",
+      ];
+      const sentence = getSentence(words);
+      console.log(sentence); // "The quick brown fox jumps over the lazy dog."
+
+      //sumNumArrays
+      function sumNumArrays(arr1, arr2) {
+        const sum1 = arr1.reduce((acc, cur) => acc + cur, 0);
+        const sum2 = arr2.reduce((acc, cur) => acc + cur, 0);
+        return sum1 + sum2;
+      }
+
+      //welcomeUsers
+      function welcomeUsers(users) {
+        return users.map((user) => {
+          const { firstName, lastName, age } = user;
+          return `Welcome, ${firstName} ${lastName}! You are ${age} years old.`;
+        });
+      }
+    </script>
+  </body>
+</html>
