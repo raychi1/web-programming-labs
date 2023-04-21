@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // масив рядків
+      const stringArray = ["apple", "banana", "cherry"];
+      // масив чисел
+      const numberArray = [1, 2, 3, 4, 5];
+      // масив булевих значень
+      const booleanArray = [true, false, true];
+      // масив об'єктів
+      const objectArray = [
+        { name: "John", age: 30 },
+        { name: "Mary", age: 25 },
+        { name: "Peter", age: 40 },
+      ];
+      // масив функцій
+      const functionArray = [
+        function () {
+          console.log("Hello");
+        },
+        function () {
+          console.log("World");
+        },
+      ];
+
+      //for
+      const arr1 = [];
+      for (let i = 0; i < 5; i++) {
+        arr1.push(i);
+      }
+
+      //do...while
+      const nums = [1, 2, 3, 4, 5];
+      let sum = 0;
+      let i = 0;
+      do {
+        sum += nums[i];
+        i++;
+      } while (i < nums.length);
+      console.log(sum); // 15
+
+      //sum
+      function sum(numbers) {
+        let result = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          result += numbers[i];
+        }
+        return result;
+      }
+      const testnumbers = [1, 2, 3, 4, 5];
+      const result = sum(testnumbers);
+      console.log(result); // 15
+
+      //getSentence
+      function getSentence(words) {
+        return words.join(" ") + ".";
+      }
+      const words = [
+        "The",
+        "quick",
+        "brown",
+        "fox",
+        "jumps",
+        "over",
+        "the",
+        "lazy",
+        "dog",
+      ];
+      const sentence = getSentence(words);
+      console.log(sentence); // "The quick brown fox jumps over the lazy dog."
+
+      //sumNumArrays
+      function sumNumArrays(arr1, arr2) {
+        const sumArr = [...arr1, ...arr2];
+        let sumNum = 0;
+        for (let i = 0; i < sumArr.length; i++) {
+          sumNum += sumArr[i];
+        }
+        return sumNum;
+      }
+
+      //welcomeUsers
+      function welcomeUsers(users) {
+        const greetings = [];
+        for (const user of users) {
+          greetings.push(`Hello, ${user.name}! You are ${user.age} years old.`);
+        }
+        return greetings;
+      }
+      const users = [
+        { name: "John", age: 25 },
+        { name: "Kate", age: 30 },
+        { name: "Alex", age: 20 },
+      ];
+      const greetings = welcomeUsers(users);
+      console.log(greetings);
+      // ["Hello, John! You are 25 years old.", "Hello, Kate! You are 30 years old.", "Hello, Alex! You are 20 years old."]
+    </script>
+  </body>
+</html>
