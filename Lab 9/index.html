@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Завдання 1 Створити 5 змінних рядкового типу
+      let str1 = "Hello";
+      let str2 = "World";
+      let str3 = "JavaScript";
+      let str4 = "Web";
+      let str5 = "Programming";
+
+      // Завдання 2 Використати неочевидні приклади конкатенації рядків в JavaScript:
+      let concatExample1 = str1 + " " + str2; // З'єднання двох рядків з використанням оператора '+'
+      let concatExample2 = `${str3} ${str4}`; // З'єднання двох рядків з використанням шаблонних рядків (template strings)
+      let concatExample3 = str5.concat(" ", str1); // З'єднання двох рядків з використанням методу concat()
+
+      // Завдання 3 Використати методи toLowerCase() та toUpperCase():
+      let lowercaseExample = str1.toLowerCase(); // Перетворення рядка на нижній регістр
+      let uppercaseExample = str2.toUpperCase(); // Перетворення рядка на верхній регістр
+
+      // Завдання 4 Використати методи replace(), trim() та match():
+      let replaceExample = str3.replace("Script", "Language"); // Заміна частини рядка на інший рядок
+      let trimExample = "   Hello World   ".trim(); // Видалення зайвих пробілів з початку та кінця рядка
+      let matchExample = str4.match(/W[b-z]b/); // Пошук в рядку відповідностей до виразу шаблону
+
+      // Завдання 5 Використати метод sort() в поєднанні з localeCompare():
+      let fruits = ["яблуко", "груша", "банан", "апельсин"];
+      fruits.sort((a, b) => a.localeCompare(b)); // Сортування масиву рядків за лексикографічним порядком
+
+      // Завдання 6 Використати метод includes():
+      let searchExample = str5.includes("gram"); // Перевірка наявності підрядка в рядку
+
+      // Завдання 7 Створити функцію welcomeUsers, яка буде приймати масив об'єктів з даними користувачів
+      // та формувати привітання для кожного з них у вигляді нового масиву рядків з використанням template string:
+      function welcomeUsers(users) {
+        let greetings = [];
+        for (let user of users) {
+          let { name, age } = user;
+          let greeting = `Привіт, ${name}! Тобі ${age} років.`;
+          greetings.push(greeting);
+        }
+        return greetings;
+      }
+      let users = [
+        { name: "Анна", age: 25 },
+        { name: "Петро", age: 32 },
+        { name: "Олена", age: 19 },
+      ];
+      let userGreetings = welcomeUsers(users);
+      console.log(userGreetings);
+
+      // Завдання 8 Створити функцію, яка буде перевіряти чи задане слово являється паліндромом:
+      function isPalindrome(word) {
+        let reversed = word.split("").reverse().join("");
+        return word === reversed;
+      }
+
+      let word1 = "radar";
+      let word2 = "hello";
+
+      console.log(isPalindrome(word1)); // true, "radar" є паліндромом
+      console.log(isPalindrome(word2)); // false, "hello" не є паліндромом
+    </script>
+  </body>
+</html>
